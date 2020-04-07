@@ -48,4 +48,6 @@ and it’s got all the benefits of Debian Buster.
 5- docker-compose up --build # Build and start everything with Docker Compose
 6- docker-compose stop # stop docker image
 7- ls -al # show all files even the hidden ones.
+8- docker-compose ps
+9- docker-compose rm -f
 ```

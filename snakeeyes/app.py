@@ -10,7 +10,7 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
     app.config.from_object('config.settings')
-    app.config.from_pyfile('settings.py', silent=True)
+    app.config.from_pyfile('settings.py', silent=True)  # silent argument tell flask to not crash if the file doesn't exist, -> settings.py is settings file for prod env
 
     @app.route('/')
     def index():
