@@ -45,6 +45,7 @@ and it’s got all the benefits of Debian Buster.
 2- docker images # dispay images
 3- docker ps    # display all container running
 4- docker kill 40d430274069 # kill a docker build
-5- docker-compose up --build # build and run the application, NB: THERE IS NO CONTAINER
-
+5- docker-compose up --build # Build and start everything with Docker Compose
+6- docker-compose stop # stop docker image
+7- ls -al # show all files even the hidden ones.
 ```
