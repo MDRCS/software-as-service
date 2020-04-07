@@ -50,4 +50,35 @@ and it’s got all the benefits of Debian Buster.
 7- ls -al # show all files even the hidden ones.
 8- docker-compose ps
 9- docker-compose rm -f
+10- docker-compose exec website py.test snakeeyes/tests
+11- docker network ls # View your Docker networks
+12- docker-compose exec website snakeeyes routes
+```
+
+```
+# Remove "dangling" images
+docker rmi -f $(docker images -qf dangling=true)
+```
+```
+# Run the test coverage tool
+docker-compose exec website py.test --cov-report term-missing --cov snakeeyes
+```
+```
+Performing Static Analysis on the Code Base
+# Run the flake8 tool
+docker-compose exec website flake8 .
+```
+
+
+
+```
+- DATABASE POSTGRES.
+    + Reset and seed the database
+    + The database schema changed since the last section, so we need to do this.
+
+docker-compose exec website snakeeyes db reset --with-testdb
+docker-compose exec website snakeeyes add all
+
+### Migration - Alembic :
+docker-compose exec website alembic upgrade head
 ```
