@@ -30,6 +30,21 @@ CSRF Protection            |	    Twitter Bootstrap v4
 Webpack	ES6                |        Javascript / SCSS
 ```
 
-+ Bash Commands :
-docker build -t snakeeyes:latest .
+### + Docker - Recommendation  :
 
+```
+The official Docker Python image in its slim variant—e.g. python:3.8-slim-buster—is a good base image for most use cases.
+it’s 60MB when downloaded, 180MB when uncompressed to disk, it gives you the latest Python releases,
+and it’s got all the benefits of Debian Buster.
+
+```
+
++ Bash Commands :
+```
+1- docker build -t snakeeyes:latest . # build an app based on `Dockerfile`, the dot . mean the app project is in this directory
+2- docker images # dispay images
+3- docker ps    # display all container running
+4- docker kill 40d430274069 # kill a docker build
+5- docker-compose up --build # build and run the application, NB: THERE IS NO CONTAINER
+
+```
