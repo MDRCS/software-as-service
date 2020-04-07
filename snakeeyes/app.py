@@ -3,8 +3,7 @@ import logging
 from logging.handlers import SMTPHandler
 
 import stripe
-
-from werkzeug.middleware import proxy_fix
+from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Flask, render_template, request
 from flask_login import current_user
 from celery import Celery
@@ -182,7 +181,7 @@ def middleware(app):
     :return: None
     """
     # Swap request.remote_addr with the real IP address even if behind a proxy.
-    app.wsgi_app = proxy_fix(app.wsgi_app)
+    app.wsgi_app = ProxyFix(app.wsgi_app)
 
     return None
 
