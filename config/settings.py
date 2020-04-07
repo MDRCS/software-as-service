@@ -16,7 +16,7 @@ MAIL_PORT = 587
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
 MAIL_USERNAME = 'mdr.ga99@gmail.com'
-MAIL_PASSWORD = 'mohamed-2'
+MAIL_PASSWORD = ''
 
 # Flask-Babel.
 LANGUAGES = {
