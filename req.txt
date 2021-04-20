@@ -58,7 +58,7 @@ MarkupSafe==1.1.1
 mccabe==0.4.0
 pbr==5.4.4
 pep8==1.7.1
-py==1.8.1
+py==1.10.0
 pyflakes==1.0.0
 python-dateutil==2.8.1
 python-editor==1.0.4
